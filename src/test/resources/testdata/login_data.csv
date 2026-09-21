@@ -1,0 +1,8 @@
+username,password,expectedResult
+REPLACE_WITH_YOUR_REGISTERED_USERNAME,REPLACE_WITH_YOUR_PASSWORD,success
+invaliduser123,wrongpassword,failure
+,demo123,failure
+REPLACE_WITH_YOUR_REGISTERED_USERNAME,,failure
+' OR '1'='1,anything,failure
+this_username_is_intentionally_long_to_exercise_boundary_behavior_1234567890,wrongpassword,failure
+	,   ,failure
