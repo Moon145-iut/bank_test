@@ -9,8 +9,6 @@ import pages.LoginPage;
 import pages.TransferFundsPage;
 
 public class TransferFundsTest extends BaseTest {
-
-    // TODO: replace with a username/password you registered yourself on
     // https://parabank.parasoft.com/parabank/register.htm
         private static final String USERNAME = System.getProperty("parabank.username", "");
         private static final String PASSWORD = System.getProperty("parabank.password", "");
@@ -43,9 +41,7 @@ public class TransferFundsTest extends BaseTest {
     @Test
     public void testTransferWithNegativeAmount() {
                 requireCredentials();
-        // Before trusting this assertion, manually try a negative transfer on the live
-        // site once and record what actually happens — some demo apps silently accept
-        // negative amounts, which is itself a real bug worth documenting rather than coding around.
+
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginAs(USERNAME, PASSWORD);
 
